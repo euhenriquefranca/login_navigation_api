@@ -24,6 +24,7 @@ class LoginPage extends StatelessWidget {
                 label: 'Login',
               ),
               CustomTextFieldWidget(
+                obscureText: true,
                 onChanged: _controller.setPass,
                 label: 'Senha',
               ),
