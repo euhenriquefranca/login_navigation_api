@@ -33,8 +33,12 @@ class _HomePageState extends State<HomePage> {
             itemCount: list.length,
             itemBuilder: (_, idx) => ListTile(
               leading: Text(list[idx].id.toString()),
+              title: Text(list[idx].title.toString()),
               trailing: const Icon(Icons.arrow_forward),
-              title: Text(list[idx].title),
+              onTap: () => Navigator.of(context).pushNamed(
+                '/details',
+                arguments: list[idx],
+              ),
             ),
             separatorBuilder: (_, __) => const Divider(),
           );
